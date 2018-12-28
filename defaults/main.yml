@@ -1,10 +1,13 @@
 ---
 
+go_os: "linux"
+go_arch: "amd64"
+
 # mirror for Go release tarballs
 go_mirror: "https://storage.googleapis.com/golang/"
-go_tarball_name: "go{{ go_version }}.linux-amd64.tar.gz"
+go_tarball_name: "go{{ go_version }}.{{ go_os }}-{{ go_arch }}.tar.gz"
 
-go_version_target: "go version go{{ go_version }} linux/amd64"
+go_version_target: "go version go{{ go_version }} {{ go_os }}/{{ go_arch }}"
 
 # the signature will be fetched from the mirror
 # using tarball_name+".asc"
