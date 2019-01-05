@@ -3,6 +3,8 @@ Go
 
 Ansible role that installs [Go](https://golang.org/). The latest stable release that has been compiled for x86 64-bit Linux systems is installed by default, and different platforms and versions are supported by modifying the role variables.
 
+[galaxy](https://galaxy.ansible.com/yogo1212/ansible_go)
+
 Role Variables
 --------------
 
