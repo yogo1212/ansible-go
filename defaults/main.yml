@@ -4,7 +4,7 @@ go_os: "linux"
 go_arch: "amd64"
 
 # mirror for Go release tarballs
-go_mirror: "https://storage.googleapis.com/golang/"
+go_mirror: "https://dl.google.com/go/"
 go_tarball_name: "go{{ go_version }}.{{ go_os }}-{{ go_arch }}.tar.gz"
 
 go_version_target: "go version go{{ go_version }} {{ go_os }}/{{ go_arch }}"
