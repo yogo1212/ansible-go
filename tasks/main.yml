@@ -31,4 +31,4 @@
   copy:
     src: go-path.sh
     dest: /etc/profile.d
-  when: set_go_path|bool
+  when: set_go_path|bool # TODO ugly, see https://github.com/ansible/ansible/issues/53428#issuecomment-495175232
