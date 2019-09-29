@@ -23,11 +23,13 @@
   when: current_go_version is failed or current_go_version.stdout != go_version_target
 
 - name: Add the Go bin directory to the PATH environment variable for all users
+  become: yes
   copy:
     src: go-bin.sh
     dest: /etc/profile.d
 
 - name: Set GOPATH for all users
+  become: yes
   copy:
     src: go-path.sh
     dest: /etc/profile.d
