@@ -20,6 +20,11 @@ Tarball checksums can be found on the [Go Download Page](https://golang.org/dl/)
 
 For more options, check the [default](defaults/main.yml) variables.
 
+Updating Google's Linux Package Signing Keys
+--------------------------------------------
+
+According to [this page](https://www.google.com/linuxrepositories/), the latest version of the keys for the GPG signature can be found [here](https://dl.google.com/linux/linux_signing_key.pub).
+
 License
 -------
 
