@@ -4,6 +4,7 @@
     shell:
       curl https://api.github.com/repos/golang/go/git/refs/tags/ | egrep 'ref.*refs/tags/go([0-9.]+)",' | egrep -o "[0-9.]+" | sort -V | tail -n 1
     register: latest_release
+    check_mode: no
     changed_when: False
 
   - name: Setting version from latest release
@@ -14,6 +15,7 @@
 
 - name: Register the current Go version (if any)
   command: /usr/local/go/bin/go version
+  check_mode: no
   ignore_errors: yes
   register: current_go_version
   changed_when: false
