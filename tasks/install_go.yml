@@ -42,6 +42,12 @@
       chdir: "{{ go_download_dir }}"
   when: go_check_signature
 
+- name: Install tar
+  become: yes
+  package:
+    name: tar
+    state: present
+
 - name: Remove old installation of Go
   become: yes
   file:
