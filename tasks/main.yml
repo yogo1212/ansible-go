@@ -5,9 +5,9 @@
     shell: |-
       # api.github.com has no ipv6 in 2023.. try to use git with googlesource first
       {
-        if command -v git >&- 2>&-; then
+        if command -v git >/dev/null 2>/dev/null; then
           git ls-remote --tags --sort='v:refname' https://go.googlesource.com/go "refs/tags/go*" | sed -nE 's#^.*refs/tags/go([0-9.]+)$#\1#p'
-        elif command -v curl >&- 2>&-; then
+        elif command -v curl >/dev/null 2>/dev/null; then
           curl https://api.github.com/repos/golang/go/git/refs/tags/ | sed -nE 's#^.*"refs/tags/go([0-9.]+)".*$#\1#p' | sort -V
         fi
       } | tail -n 1
