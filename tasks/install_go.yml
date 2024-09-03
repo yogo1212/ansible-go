@@ -53,6 +53,7 @@
   file:
     path: /usr/local/go
     state: absent
+  diff: false # this diff can be very long
 
 - name: Extract the Go tarball
   become: yes
